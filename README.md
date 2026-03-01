@@ -13,6 +13,7 @@ Don't forget that you must also fill out an evaluation form in Moodle to conside
 
 (STUDENT NUMBER HERE) (STUDENT NAME HERE) (STUDENT EMAIL HERE)
 (402-25-9128) (Alexis R. Arana Questell) (alexis.arana@upr.edu)
+(844-22-1347) (Eniel D. Torres Vera) (eniel.torres2@upr.edu)
 
 Any project that doesn't compile will receive a 0.
 
