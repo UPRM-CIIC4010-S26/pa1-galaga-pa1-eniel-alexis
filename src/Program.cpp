@@ -61,7 +61,11 @@ void Program::Update() {
                 PlayerReset();
             }
         }
-
+        if(Enemy::score >= lastLifeScore + 1000) {
+            lives++;
+            lastLifeScore = Enemy::score;
+            if(lives > 5) lives = 5;
+        }
         if (lives <= 0 && pauseFrames <= 0) gameOver = true;
         Projectile::CleanProjectiles();
         Projectile::ProjectileCollision();
@@ -71,6 +75,7 @@ void Program::Update() {
 void Program::Draw() {
     background.Draw();
     DrawText(("Score: " + std::to_string(Enemy::score)).c_str(), 10, 10, 24, WHITE);
+    DrawText(("Lives: " + std::to_string(lives)).c_str(), 10, 40, 24, WHITE);
     if (pauseFrames <= 0 && !gameOver) player->draw();
     for (Animation& a : Animation::animations) a.draw();
 
