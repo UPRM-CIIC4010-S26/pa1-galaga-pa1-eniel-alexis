@@ -70,6 +70,7 @@ void Program::Update() {
 
 void Program::Draw() {
     background.Draw();
+    DrawText(("Score: " + std::to_string(Enemy::score)).c_str(), 10, 10, 24, WHITE);
     if (pauseFrames <= 0 && !gameOver) player->draw();
     for (Animation& a : Animation::animations) a.draw();
 
@@ -208,4 +209,5 @@ void Program::Reset() {
     count = 0;
     delay = 0;
     lives = 3;
+    Enemy::score = 0;
 }
