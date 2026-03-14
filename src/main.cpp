@@ -7,7 +7,7 @@ int main ()
 {
 	SearchAndSetResourceDir("resources");
     InitAudioDevice();
-	SetTargetFPS(60);
+	SetTargetFPS(100);
 
 	raylib::Window window(1000, 1000, "Galaga", FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 	Program Galaga;
